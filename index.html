@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Talia is an AI and live-chat assistant that answers questions, captures leads, schedules appointments, and connects customers with your team.">
+  <meta name="description" content="Talia turns website questions into leads and appointments with AI answers, live chat, lead capture, scheduling, and seamless human handoff.">
   <meta name="theme-color" content="#061713">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>Talia — Your AI business assistant</title>
@@ -209,6 +209,12 @@
     .stat strong { display: block; color: var(--green-soft); font-size: 29px; letter-spacing: -.04em; }
     .stat span { color: var(--muted); font-size: 13px; }
 
+    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .benefit-card { padding: 25px; border: 1px solid var(--line); border-radius: 21px; background: rgba(255,255,255,.018); }
+    .benefit-card strong { display: block; margin-bottom: 8px; font-size: 18px; letter-spacing: -.025em; }
+    .benefit-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .benefit-number { width: 35px; height: 35px; display: grid; place-items: center; margin-bottom: 28px; border-radius: 11px; background: rgba(19,221,138,.1); color: var(--green); font-weight: 850; }
+
     .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
     .feature-card { position: relative; min-height: 260px; overflow: hidden; padding: 28px; border: 1px solid var(--line); border-radius: 25px; background: linear-gradient(145deg, rgba(20,43,38,.83), rgba(8,21,18,.9)); transition: transform .25s ease, border-color .25s ease; }
     .feature-card:hover { transform: translateY(-4px); border-color: rgba(135,255,201,.25); }
@@ -361,6 +367,7 @@
       .hero-actions, .proof { justify-content: center; }
       .hero-visual { width: min(680px, 100%); margin-inline: auto; }
       .feature-card.large, .feature-card.medium, .feature-card.third { grid-column: span 6; }
+      .benefit-grid { grid-template-columns: repeat(2, 1fr); }
       .contact-grid { grid-template-columns: 1fr; }
       .dash-grid { grid-template-columns: 34% 66%; }
       .visitor-profile { display: none; }
@@ -386,6 +393,7 @@
       .stat:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
       .stat:nth-child(4) { border-top: 1px solid var(--line); }
       .feature-card.large, .feature-card.medium, .feature-card.third { grid-column: span 12; min-height: 285px; }
+      .benefit-grid { grid-template-columns: 1fr; }
       .control-grid, .contact-grid { grid-template-columns: 1fr; }
       .dash-grid { grid-template-columns: 1fr; }
       .conversation-list { display: none; }
@@ -435,8 +443,8 @@
       <div class="container hero-grid">
         <div class="hero-copy" data-reveal>
           <div class="eyebrow"><span class="pulse"></span> AI + live support in one widget</div>
-          <h1>Turn every visit into a <span class="gradient-text">conversation.</span></h1>
-          <p>Talia answers questions, captures leads, schedules appointments, and brings in your team when a human touch matters.</p>
+          <h1>Turn website questions into <span class="gradient-text">new customers.</span></h1>
+          <p>Talia gives every visitor an immediate answer, captures their details, helps them schedule, and brings in your team when a human touch matters.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/923028170882?text=Hi%20Taimoor%2C%20I%27d%20like%20to%20discuss%20adding%20Talia%20to%20my%20website." target="_blank" rel="noopener">Request a tailored demo
               <svg viewBox="0 0 24 24" fill="none"><path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -447,7 +455,7 @@
             </button>
           </div>
           <div class="proof">
-            <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No credit card required</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Tailored to your business</span>
             <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Install in minutes</span>
             <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Human handoff included</span>
           </div>
@@ -479,7 +487,7 @@
 
     <section class="logo-cloud" aria-label="Supported integrations">
       <div class="container">
-        <p>Fits into the tools your business already uses</p>
+        <p>Built for service businesses, ecommerce stores, agencies, and growing teams</p>
         <div class="integration-row">
           <span class="integration-chip"><span class="chip-icon">G</span>Google Calendar</span>
           <span class="integration-chip"><span class="chip-icon">C</span>Calendly</span>
@@ -487,6 +495,24 @@
           <span class="integration-chip"><span class="chip-icon">M</span>Messenger</span>
           <span class="integration-chip"><span class="chip-icon">I</span>Instagram</span>
           <span class="integration-chip"><span class="chip-icon">WP</span>WordPress</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-heading center" data-reveal>
+          <div class="section-kicker">Why it matters</div>
+          <h2 id="why-title">Your website stays open. Your customer support should too.</h2>
+          <p>People arrive with questions about services, pricing, availability, and next steps. Talia responds while their interest is still high.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card" data-reveal><div class="benefit-number">01</div><strong>Answer instantly</strong><p>Help visitors find the right information without making them search across your website.</p></article>
+          <article class="benefit-card" data-reveal><div class="benefit-number">02</div><strong>Capture qualified leads</strong><p>Collect names, emails, phone numbers, and customer needs while they are actively considering you.</p></article>
+          <article class="benefit-card" data-reveal><div class="benefit-number">03</div><strong>Support customers 24/7</strong><p>Keep useful conversations moving when your staff is busy, unavailable, or closed for the day.</p></article>
+          <article class="benefit-card" data-reveal><div class="benefit-number">04</div><strong>Bring in a real person</strong><p>Notify the responsible team member and let them continue the conversation with full context.</p></article>
+          <article class="benefit-card" data-reveal><div class="benefit-number">05</div><strong>Book the next step</strong><p>Move interested visitors from a question to a scheduled appointment without losing momentum.</p></article>
+          <article class="benefit-card" data-reveal><div class="benefit-number">06</div><strong>Save staff time</strong><p>Let Talia handle common, repetitive questions so your team can focus on customers who need them.</p></article>
         </div>
       </div>
     </section>
@@ -551,12 +577,12 @@
       <div class="container how-grid">
         <div class="section-copy" data-reveal>
           <div class="section-kicker">Simple setup</div>
-          <h2 id="install-title">From signup to helpful in three steps.</h2>
-          <p>No complicated rebuild. Add one snippet, choose what Talia can learn, and start helping visitors.</p>
+          <h2 id="install-title">From website visitor to customer.</h2>
+          <p>Talia makes the path from first question to real business opportunity simple and immediate.</p>
           <div class="steps">
-            <div class="step"><div class="step-number">1</div><div><h3>Create your workspace</h3><p>Add your website, team members, business hours, and preferred support experience.</p></div></div>
-            <div class="step"><div class="step-number">2</div><div><h3>Teach Talia</h3><p>Choose website pages, upload approved files, and add frequently asked questions.</p></div></div>
-            <div class="step"><div class="step-number">3</div><div><h3>Paste one line of code</h3><p>Place the embed snippet on your site and customize the widget to match your brand.</p></div></div>
+            <div class="step"><div class="step-number">1</div><div><h3>A visitor starts a conversation</h3><p>Instead of searching through pages, they ask a question naturally from any page on your site.</p></div></div>
+            <div class="step"><div class="step-number">2</div><div><h3>Talia answers or qualifies the lead</h3><p>Your approved business information powers the reply, while contact details and needs are captured.</p></div></div>
+            <div class="step"><div class="step-number">3</div><div><h3>Your team wins the opportunity</h3><p>Take over live, follow up with the lead, or let the visitor schedule the next available appointment.</p></div></div>
           </div>
         </div>
         <div class="code-card" data-reveal>
@@ -740,10 +766,10 @@
     document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
 
     const answers = [
-      'Talia can answer from your approved website pages, files, text, and FAQs.',
-      'Yes—your team can take over any conversation from the Live Inbox.',
-      'You can connect Google Calendar or Calendly and let visitors schedule from the chat.',
-      'Setup is quick: create a workspace, add your knowledge, then paste one embed snippet.'
+      'Talia answers from your approved website pages, services, product information, files, and FAQs.',
+      'Yes—your team can be notified and take over any conversation from the Live Inbox.',
+      'Visitors can share their details and schedule through Google Calendar or Calendly from the conversation.',
+      'Talia can keep helping after hours, then preserve the lead and conversation for your team to follow up.'
     ];
     let answerIndex = 0;
     demoForm.addEventListener('submit', event => {
