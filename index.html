@@ -215,6 +215,15 @@
     .benefit-card p { margin: 0; color: var(--muted); font-size: 14px; }
     .benefit-number { width: 35px; height: 35px; display: grid; place-items: center; margin-bottom: 28px; border-radius: 11px; background: rgba(19,221,138,.1); color: var(--green); font-weight: 850; }
 
+    .complete-wrap { padding: 38px; border: 1px solid rgba(99,255,184,.25); border-radius: 28px; background: radial-gradient(circle at 90% 0%, rgba(19,221,138,.16), transparent 23rem), linear-gradient(145deg, #102720, #091713); }
+    .complete-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 32px; }
+    .complete-head h2 { max-width: 690px; margin-bottom: 0; }
+    .ready-badge { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 9px; padding: 10px 14px; border: 1px solid rgba(116,243,188,.3); border-radius: 999px; background: rgba(19,221,138,.09); color: var(--green-soft); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+    .ready-badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px rgba(19,221,138,.1); }
+    .complete-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
+    .complete-item { display: flex; gap: 11px; padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.025); color: #d3e3dd; font-size: 13px; }
+    .complete-item svg { width: 18px; height: 18px; flex: 0 0 auto; color: var(--green); }
+
     .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
     .feature-card { position: relative; min-height: 260px; overflow: hidden; padding: 28px; border: 1px solid var(--line); border-radius: 25px; background: linear-gradient(145deg, rgba(20,43,38,.83), rgba(8,21,18,.9)); transition: transform .25s ease, border-color .25s ease; }
     .feature-card:hover { transform: translateY(-4px); border-color: rgba(135,255,201,.25); }
@@ -368,6 +377,8 @@
       .hero-visual { width: min(680px, 100%); margin-inline: auto; }
       .feature-card.large, .feature-card.medium, .feature-card.third { grid-column: span 6; }
       .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+      .complete-grid { grid-template-columns: repeat(2, 1fr); }
+      .complete-head { align-items: start; flex-direction: column; }
       .contact-grid { grid-template-columns: 1fr; }
       .dash-grid { grid-template-columns: 34% 66%; }
       .visitor-profile { display: none; }
@@ -394,6 +405,8 @@
       .stat:nth-child(4) { border-top: 1px solid var(--line); }
       .feature-card.large, .feature-card.medium, .feature-card.third { grid-column: span 12; min-height: 285px; }
       .benefit-grid { grid-template-columns: 1fr; }
+      .complete-wrap { padding: 25px 19px; }
+      .complete-grid { grid-template-columns: 1fr; }
       .control-grid, .contact-grid { grid-template-columns: 1fr; }
       .dash-grid { grid-template-columns: 1fr; }
       .conversation-list { display: none; }
@@ -569,6 +582,31 @@
             <h3>Give visitors more ways to connect</h3>
             <p>Add clear WhatsApp, Messenger, Instagram, SMS, phone, and custom-link channels to the widget.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="complete-title">
+      <div class="container">
+        <div class="complete-wrap" data-reveal>
+          <div class="complete-head">
+            <div><div class="section-kicker">A complete customer conversation platform</div><h2 id="complete-title">Every essential feature is ready to work together.</h2></div>
+            <span class="ready-badge">Ready for your business</span>
+          </div>
+          <div class="complete-grid">
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>AI answers trained on your business</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Real-time live chat and human takeover</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Name, email, phone, and lead capture</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Google Calendar and Calendly scheduling</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Automatic language detection and translation</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Searchable conversation and contact history</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>FAQs, website learning, files, and custom text</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Multiple team seats and assignments</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Business hours and offline messaging</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Quick replies for faster support</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Privacy controls and secure sessions</div>
+            <div class="complete-item"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Mobile-friendly widget and live inbox</div>
+          </div>
         </div>
       </div>
     </section>
