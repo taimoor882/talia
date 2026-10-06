@@ -297,23 +297,15 @@
     .timer-track { height: 6px; margin-top: 11px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.07); }
     .timer-track span { display: block; width: 80%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--green), var(--orange)); }
 
-    .pricing-toggle { display: flex; width: fit-content; margin: -21px auto 34px; padding: 4px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.025); }
-    .pricing-toggle button { padding: 8px 13px; border: 0; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; font-weight: 750; }
-    .pricing-toggle button.active { background: rgba(19,221,138,.14); color: var(--green-soft); }
-    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
-    .price-card { position: relative; padding: 26px 22px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.018); }
-    .price-card.popular { border-color: rgba(40,235,148,.45); background: linear-gradient(180deg, rgba(19,221,138,.1), rgba(255,255,255,.018)); box-shadow: 0 22px 60px rgba(0,200,116,.1); }
-    .popular-label { position: absolute; top: 13px; right: 13px; padding: 5px 8px; border-radius: 999px; background: var(--green); color: #062016; font-size: 8px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-    .price-card h3 { margin: 0; font-size: 19px; }
-    .price-card > p { min-height: 42px; margin: 8px 0 19px; color: var(--muted); font-size: 12px; }
-    .price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 19px; }
-    .price strong { font-size: 37px; letter-spacing: -.055em; }
-    .price span { color: var(--muted-2); font-size: 11px; }
-    .price-card .btn { width: 100%; min-height: 42px; font-size: 12px; }
-    .price-features { display: grid; gap: 10px; margin: 21px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line); list-style: none; }
-    .price-features li { display: flex; gap: 8px; color: #bdcec8; font-size: 12px; }
-    .price-features svg { width: 15px; flex: 0 0 auto; color: var(--green); }
-    .pricing-note { margin-top: 18px; color: var(--muted-2); text-align: center; font-size: 11px; }
+    .contact-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; align-items: stretch; }
+    .contact-card { padding: 38px; border: 1px solid var(--line); border-radius: 26px; background: linear-gradient(145deg, rgba(20,43,38,.83), rgba(8,21,18,.92)); }
+    .contact-card.primary { background: radial-gradient(circle at 90% 0%, rgba(19,221,138,.22), transparent 18rem), #0c201b; border-color: rgba(99,255,184,.26); }
+    .contact-card h3 { margin: 15px 0 10px; font-size: 28px; letter-spacing: -.035em; }
+    .contact-card p { margin: 0; color: var(--muted); }
+    .contact-card .btn { margin-top: 25px; min-height: 54px; }
+    .contact-details { display: grid; gap: 14px; margin-top: 24px; }
+    .contact-details a { display: flex; align-items: center; gap: 11px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; color: #d9e8e2; background: rgba(255,255,255,.025); }
+    .contact-details a:hover { border-color: rgba(169,251,214,.4); color: var(--green-soft); }
 
     .faq-list { max-width: 820px; margin: 0 auto; }
     details { border-bottom: 1px solid var(--line); }
@@ -368,7 +360,7 @@
       .hero-actions, .proof { justify-content: center; }
       .hero-visual { width: min(680px, 100%); margin-inline: auto; }
       .feature-card.large, .feature-card.medium, .feature-card.third { grid-column: span 6; }
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
       .dash-grid { grid-template-columns: 34% 66%; }
       .visitor-profile { display: none; }
       .conversation-main { border-right: 0; }
@@ -393,7 +385,7 @@
       .stat:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
       .stat:nth-child(4) { border-top: 1px solid var(--line); }
       .feature-card.large, .feature-card.medium, .feature-card.third { grid-column: span 12; min-height: 285px; }
-      .control-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .control-grid, .contact-grid { grid-template-columns: 1fr; }
       .dash-grid { grid-template-columns: 1fr; }
       .conversation-list { display: none; }
       .dashboard { border-radius: 21px; }
@@ -418,18 +410,18 @@
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="4" stroke="currentColor" stroke-width="2"/><path d="M9 12h.01M15 12h.01M9 16h6M12 7V4M10.5 4h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </span>
-        <span>Talia<small>by Talktiv.ai</small></span>
+        <span>Talia<small>AI business assistant</small></span>
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#product">Product</a>
         <a href="#features">Features</a>
         <a href="#inbox">Live inbox</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="nav-actions">
-        <a class="btn" href="#">Sign in</a>
-        <a class="btn btn-primary" href="#pricing">Start free</a>
+        <a class="btn" href="mailto:awantaimoor262@gmail.com">Email</a>
+        <a class="btn btn-primary" href="https://wa.me/923028170882?text=Hi%20Taimoor%2C%20I%27m%20interested%20in%20Talia%20for%20my%20business." target="_blank" rel="noopener">Contact on WhatsApp</a>
         <button class="btn mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
@@ -445,7 +437,7 @@
           <h1>Turn every visit into a <span class="gradient-text">conversation.</span></h1>
           <p>Talia answers questions, captures leads, schedules appointments, and brings in your team when a human touch matters.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">Add Talia to your website
+            <a class="btn btn-primary" href="https://wa.me/923028170882?text=Hi%20Taimoor%2C%20I%27d%20like%20to%20discuss%20adding%20Talia%20to%20my%20website." target="_blank" rel="noopener">Request a tailored demo
               <svg viewBox="0 0 24 24" fill="none"><path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <button class="btn" type="button" data-open-demo>
@@ -570,7 +562,7 @@
           <div class="code-top"><span><i></i>&nbsp;&nbsp;&nbsp;Install Talia</span><span>HTML</span></div>
           <pre><span class="code-dim">&lt;!-- Add before the closing body tag --&gt;</span>
 <span class="code-blue">&lt;script</span>
-  <span class="code-green">src</span>=<span class="code-green">"https://cdn.talktiv.ai/widget.js"</span>
+  <span class="code-green">src</span>=<span class="code-green">"https://cdn.talia.ai/widget.js"</span>
   <span class="code-green">data-site-id</span>=<span class="code-green">"your-site-id"</span>
   <span class="code-green">async</span>
 <span class="code-blue">&gt;&lt;/script&gt;</span></pre>
@@ -642,17 +634,23 @@
       </div>
     </section>
 
-    <section class="section" id="pricing">
+    <section class="section" id="contact">
       <div class="container">
-        <div class="section-heading center" data-reveal><div class="section-kicker">Simple pricing</div><h2>Start with live chat. Add AI when you are ready.</h2><p>Every plan gives your business a polished website widget. Choose the workspace size and AI capacity that fit your team.</p></div>
-        <div class="pricing-toggle" aria-label="Billing period"><button class="active" type="button" data-period="monthly">Monthly</button><button type="button" data-period="yearly">Yearly · save 20%</button></div>
-        <div class="pricing-grid">
-          <article class="price-card" data-reveal><h3>Free</h3><p>Live chat for a small business getting started.</p><div class="price"><strong data-monthly="$0" data-yearly="$0">$0</strong><span>/ month</span></div><a class="btn" href="#">Start free</a><ul class="price-features"><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>1 website</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>1 staff seat</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Live chat and offline messages</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>No AI credits</li></ul></article>
-          <article class="price-card" data-reveal><h3>Starter</h3><p>Add Talia AI to one website.</p><div class="price"><strong data-monthly="$9.95" data-yearly="$7.96">$9.95</strong><span>/ month</span></div><a class="btn" href="#">Choose Starter</a><ul class="price-features"><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>1 website and 1 seat</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>100 monthly AI credits</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Knowledge base and FAQs</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Appointment scheduling</li></ul></article>
-          <article class="price-card popular" data-reveal><span class="popular-label">Most popular</span><h3>Growth</h3><p>For teams handling more conversations.</p><div class="price"><strong data-monthly="$19.95" data-yearly="$15.96">$19.95</strong><span>/ month</span></div><a class="btn btn-primary" href="#">Choose Growth</a><ul class="price-features"><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>1 website and 3 seats</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>300 monthly AI credits</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Multilingual live inbox</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Business hours and Boost Security</li></ul></article>
-          <article class="price-card" data-reveal><h3>Pro</h3><p>More websites, staff, and AI capacity.</p><div class="price"><strong data-monthly="$29.95" data-yearly="$23.96">$29.95</strong><span>/ month</span></div><a class="btn" href="#">Choose Pro</a><ul class="price-features"><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>5 websites and 5 seats</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>600 monthly AI credits</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Additional credit requests</li><li><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>Priority support</li></ul></article>
+        <div class="section-heading center" data-reveal><div class="section-kicker">Built for your business</div><h2>Let’s create the right customer experience for your website.</h2><p>Every Talia setup is tailored to your services, brand, customer questions, lead process, scheduling needs, and live support team.</p></div>
+        <div class="contact-grid">
+          <article class="contact-card primary" data-reveal>
+            <div class="section-kicker">Fastest response</div>
+            <h3>Message Taimoor on WhatsApp</h3>
+            <p>Tell me about your business and what you want Talia to handle. I’ll help you plan a tailored demo around your real customer journey.</p>
+            <a class="btn btn-primary" href="https://wa.me/923028170882?text=Hi%20Taimoor%2C%20I%27m%20interested%20in%20a%20tailored%20Talia%20demo%20for%20my%20business." target="_blank" rel="noopener">Start a WhatsApp conversation</a>
+          </article>
+          <article class="contact-card" data-reveal>
+            <div class="section-kicker">Contact details</div>
+            <h3>Prefer another way?</h3>
+            <p>Call directly or send an email and I’ll get back to you.</p>
+            <div class="contact-details"><a href="tel:+923028170882">Call: +92 302 8170882</a><a href="mailto:awantaimoor262@gmail.com">awantaimoor262@gmail.com</a></div>
+          </article>
         </div>
-        <p class="pricing-note">AI credits, billing availability, and plan details can be adjusted before launch.</p>
       </div>
     </section>
 
@@ -671,7 +669,7 @@
 
     <section class="cta">
       <div class="container">
-        <div class="cta-box" data-reveal><div class="section-kicker" style="margin-inline:auto">Make every visit count</div><h2>Give your website a helpful human touch—even when your team is away.</h2><p>Start with live chat for free, then add Talia’s AI assistance, scheduling, and team tools as your business grows.</p><div class="hero-actions"><a class="btn btn-primary" href="#pricing">Start free</a><button class="btn" type="button" data-open-demo>Talk to Talia</button></div></div>
+        <div class="cta-box" data-reveal><div class="section-kicker" style="margin-inline:auto">Make every visit count</div><h2>Give your website a helpful human touch—even when your team is away.</h2><p>See how Talia can answer customer questions, capture qualified leads, schedule appointments, and bring in your team at the right moment.</p><div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/923028170882?text=Hi%20Taimoor%2C%20I%27d%20like%20a%20Talia%20demo%20for%20my%20business." target="_blank" rel="noopener">Request your demo</a><button class="btn" type="button" data-open-demo>Try Talia</button></div></div>
       </div>
     </section>
   </main>
@@ -679,12 +677,12 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-about"><a class="brand" href="#top"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="4" stroke="currentColor" stroke-width="2"/><path d="M9 12h.01M15 12h.01M9 16h6M12 7V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Talia<small>by Talktiv.ai</small></span></a><p>AI answers, live support, appointments, and customer conversations in one beautiful website widget.</p></div>
-        <div class="footer-column"><strong>Product</strong><a href="#features">AI assistant</a><a href="#inbox">Live Inbox</a><a href="#features">Social channels</a><a href="#pricing">Pricing</a></div>
+        <div class="footer-about"><a class="brand" href="#top"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="4" stroke="currentColor" stroke-width="2"/><path d="M9 12h.01M15 12h.01M9 16h6M12 7V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Talia<small>AI business assistant</small></span></a><p>AI answers, live support, appointments, and customer conversations in one beautiful website widget.</p></div>
+        <div class="footer-column"><strong>Product</strong><a href="#features">AI assistant</a><a href="#inbox">Live Inbox</a><a href="#features">Social channels</a><a href="#contact">Request a demo</a></div>
         <div class="footer-column"><strong>Resources</strong><a href="#faq">Help Center</a><a href="#product">Install guide</a><a href="#">Status</a><a href="mailto:awantaimoor262@gmail.com">awantaimoor262@gmail.com</a><a href="tel:+923028170882">+92 302 8170882</a></div>
-        <div class="footer-column"><strong>Company</strong><a href="https://talktiv.ai">Talktiv.ai</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></div>
+        <div class="footer-column"><strong>Contact</strong><a href="https://wa.me/923028170882" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+923028170882">+92 302 8170882</a><a href="mailto:awantaimoor262@gmail.com">Email Taimoor</a></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 Talktiv.ai. All rights reserved.</span><span>Designed to turn website questions into business opportunities.</span></div>
+      <div class="footer-bottom"><span>© 2026 Talia. All rights reserved.</span><span>Designed to turn website questions into business opportunities.</span></div>
     </div>
   </footer>
 
@@ -766,14 +764,6 @@
       }, 450);
     });
 
-    document.querySelectorAll('.pricing-toggle button').forEach(button => button.addEventListener('click', () => {
-      document.querySelectorAll('.pricing-toggle button').forEach(item => item.classList.remove('active'));
-      button.classList.add('active');
-      const period = button.dataset.period;
-      document.querySelectorAll('.price strong[data-monthly]').forEach(price => {
-        price.textContent = price.dataset[period];
-      });
-    }));
   </script>
 </body>
 </html>
